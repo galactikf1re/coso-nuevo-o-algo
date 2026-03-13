@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #161616;
+      --border: #2a2a2a;
+      --accent: #c8a96e;
+      --accent-glow: rgba(200, 169, 110, 0.15);
+      --text: #e8e2d9;
+      --muted: #6b6b6b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Sans', sans-serif;
+      background-image: radial-gradient(ellipse at 20% 50%, rgba(200,169,110,0.04) 0%, transparent 60%),
+                        radial-gradient(ellipse at 80% 20%, rgba(200,169,110,0.03) 0%, transparent 50%);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+      animation: fadeUp 0.6s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-header {
+      margin-bottom: 36px;
+    }
+
+    .card-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .card-header p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px;
+      font-weight: 300;
+    }
+
+    .accent-line {
+      width: 36px;
+      height: 2px;
+      background: var(--accent);
+      margin-top: 14px;
+      border-radius: 2px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .field:nth-child(1) { animation-delay: 0.05s; }
+    .field:nth-child(2) { animation-delay: 0.10s; }
+    .field:nth-child(3) { animation-delay: 0.15s; }
+    .field:nth-child(4) { animation-delay: 0.20s; }
+    .field:nth-child(5) { animation-delay: 0.25s; }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      background: #1c1c1c;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: var(--accent);
+      background: #202020;
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #3a3a3a;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 8px;
+      padding: 13px;
+      background: var(--accent);
+      color: #0f0f0f;
+      border: none;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(200,169,110,0.3);
+    }
+
+    input[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 28px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Crear cuenta</h1>
+      <p>Completa los campos para registrarte</p>
+      <div class="accent-line"></div>
+    </div>
+
+    <form>
+      <div class="row">
+        <div class="field">
+          <label for="fname">Nombre</label>
+          <input type="text" id="fname" name="fname" placeholder="Juan">
+        </div>
+        <div class="field">
+          <label for="lname">Apellido</label>
+          <input type="text" id="lname" name="lname" placeholder="García">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="Usu">Usuario</label>
+        <input type="text" id="Usu" name="Usu" placeholder="@usuario">
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="field">
+        <label for="Contra">Contraseña</label>
+        <input type="password" id="Contra" name="Contra" placeholder="••••••••">
+      </div>
+
+      <div class="field">
+        <label for="CContra">Confirmar Contraseña</label>
+        <input type="password" id="CContra" name="CContra" placeholder="••••••••">
+      </div>
+
+      <input type="submit" value="Registrarse">
+    </form>
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <form>
+                  <label for="fname">Nombre:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Apellido:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                    <label for="Usuario">Usuario:</label><br>
+                    <input type="text" id="Usu" name="Usu"><br>
+                    <label for="Contra">Contraseña:</label><br>
+                    <input type="text" id="Contra" name="Contra"><br>
+                    <label for="CContra">Confirmar Contraseña:</label><br>
+                    <input type="text" id="CContra" name="CContra"><br>
+                    <input type="submit" value="Submit">
+
+            </form>
+        </body>
+    </head>
+</html>

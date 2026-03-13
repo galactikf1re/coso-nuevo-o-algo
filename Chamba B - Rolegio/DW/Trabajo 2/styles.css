@@ -1,0 +1,40 @@
+#Titulo_grande{
+    color: darkgreen;
+    /*Puedes establecer el color del texto*/
+    text-align: center;
+    /*Alinea el texto*/
+    border-style: double;
+    /*Establece el estilo del borde*/
+    text-decoration-line: underline;
+    /*Establece la decoracion del texto*/
+    text-decoration-color: mediumpurple;
+    /*Establece el color de la decoracion del texto*/
+}
+
+#intro{
+    background-color:lightsalmon;
+    /*Establece el color del fondo*/
+}
+
+#pa1{
+    background-color: lightgreen;
+    text-align: justify;
+    color: gray;
+
+}
+
+img{
+    border-style: solid;
+  border-width: medium;
+  /*Especifica el ancho de los cuatro bordes*/
+  border-color: green;
+  /*Especifica el color de los cuatro bordes*/
+  padding: 45px;
+  /*Se utiliza para generar espacio alrededor del contenido de un elemento dentro de cualquier borde*/
+  border-radius: 25px;
+  /*Se usa para agregar bordes redondeados a un elemento*/
+  outline-style: double;
+  /*Un contorno es una línea que se dibuja alrededor de los elementos fuera de los bordes, para hacer que el elemento resalte*/
+  outline-color: coral;
+  /*Se usa para establecer el color del contorno*/
+}

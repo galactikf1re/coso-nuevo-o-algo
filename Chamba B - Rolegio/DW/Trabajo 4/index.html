@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica 4</title>
+        <script src="coso.js"></script>
+        <link rel="stylesheet" href="yupi.css">
+    </head>
+    <body style="align-items: center;">
+        <p>Calculadora</p>
+        <table>
+            <tr>
+                <td colspan="4">
+                    <p id="tablero">0</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="TeclasNum op" onclick="limpiar()">C</td>
+                <td class="TeclasNum op" onclick="retroceder()">←</td>
+                <td class="TeclasNum op" onclick="raizCuadrada()">√</td>
+                <td class="TeclasNum op" onclick="presionarPotencia()">^</td>
+            </tr>
+            <tr>
+                <td class="TeclasNum" id="t7" onclick="onClickNum(7)">7</td>
+                <td class="TeclasNum" id="t8" onclick="onClickNum(8)">8</td>
+                <td class="TeclasNum" id="t9" onclick="onClickNum(9)">9</td>
+                <td class="TeclasNum" id="tdiv" onclick="onClickD()">/</td>
+            </tr>
+            <tr>
+                <td class="TeclasNum" id="t4" onclick="onClickNum(4)">4</td>
+                <td class="TeclasNum" id="t5" onclick="onClickNum(5)">5</td>
+                <td class="TeclasNum" id="t6" onclick="onClickNum(6)">6</td>
+                <td class="TeclasNum" id="tmul" onclick="onClickM()">*</td>
+            </tr>
+            <tr>
+                <td class="TeclasNum" id="t1" onclick="onClickNum(1)">1</td>
+                <td class="TeclasNum" id="t2" onclick="onClickNum(2)">2</td>
+                <td class="TeclasNum" id="t3" onclick="onClickNum(3)">3</td>
+                <td class="TeclasNum" id="tres" onclick="onClickR()">-</td> </tr>
+            <tr>
+                <td class="TeclasNum" id="t0" onclick="onClickNum(0)">0</td>
+                <td class="TeclasNum" id="tpunto" onclick="onClickNum('.')">.</td>
+                <td class="TeclasNum" id="tigual" onclick="onClickI()">=</td>
+                <td class="TeclasNum" id="tsum" onclick="onClickS()">+</td>            </tr>
+        </table>
+    </body>
+</html>
