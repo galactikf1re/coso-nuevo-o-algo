@@ -71,3 +71,44 @@ input[type="submit"]:hover {
 input[type="submit"]:active {
   transform: translateY(0);
 }
+
+table {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+
+td {
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #2d3748;
+}
+
+td:first-child {
+  font-size: 13px;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  background: none;
+  width: 40%;
+  vertical-align: top;
+}
+
+td:nth-child(2) {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 60%;
+}
+
+td:nth-child(2):focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
