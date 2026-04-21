@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Paso 6: Google Fonts — Young Serif + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Paso 5: Conectar CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Recipe page</title>
+</head>
+<body>
+
+  <!-- Paso 2: Contenedor principal -->
+  <main class="recipe-card">
+
+    <!-- Paso 3: Imagen -->
+    <img
+      class="recipe-img"
+      src="./assets/images/image-omelette.jpeg"
+      alt="Omelette en un plato"
+    >
+
+    <div class="recipe-body">
+
+      <!-- Paso 4: Título y descripción -->
+      <h1 class="recipe-title">Simple Omelette Recipe</h1>
+      <p class="recipe-desc">
+        An easy and quick dish, perfect for any meal. This classic omelette combines
+        beaten eggs cooked to perfection, optionally filled with your choice of cheese,
+        vegetables, or meats.
+      </p>
+
+      <!-- Paso 5: Tiempo de preparación -->
+      <section class="prep-time">
+        <h2 class="prep-time__title">Preparation time</h2>
+        <ul class="prep-time__list">
+          <li><span class="label">Total:</span> Approximately 10 minutes</li>
+          <li><span class="label">Preparation:</span> 5 minutes</li>
+          <li><span class="label">Cooking:</span> 5 minutes</li>
+        </ul>
+      </section>
+
+      <!-- Paso 6: Ingredientes -->
+      <section class="recipe-section">
+        <h2 class="section-title">Ingredients</h2>
+        <ul class="ingredients-list">
+          <li>2-3 large eggs</li>
+          <li>Salt, to taste</li>
+          <li>Pepper, to taste</li>
+          <li>1 tablespoon of butter or oil</li>
+          <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        </ul>
+      </section>
+
+      <hr class="divider">
+
+      <!-- Paso 7: Instrucciones -->
+      <section class="recipe-section">
+        <h2 class="section-title">Instructions</h2>
+        <ol class="instructions-list">
+          <li>
+            <span class="step-label">Beat the eggs:</span> In a bowl, beat the eggs with
+            a pinch of salt and pepper until they are well mixed. You can add a tablespoon
+            of water or milk for a fluffier texture.
+          </li>
+          <li>
+            <span class="step-label">Heat the pan:</span> Place a non-stick frying pan
+            over medium heat and add butter or oil.
+          </li>
+          <li>
+            <span class="step-label">Cook the omelette:</span> Once the butter is melted
+            and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat
+            the surface.
+          </li>
+          <li>
+            <span class="step-label">Add fillings (optional):</span> When the eggs begin
+            to set at the edges but are still slightly runny in the middle, sprinkle your
+            chosen fillings over one half of the omelette.
+          </li>
+          <li>
+            <span class="step-label">Fold and serve:</span> As the omelette continues to
+            cook, carefully lift one edge and fold it over the fillings. Let it cook for
+            another minute, then slide it onto a plate.
+          </li>
+          <li>
+            <span class="step-label">Enjoy:</span> Serve hot, with additional salt and
+            pepper if needed.
+          </li>
+        </ol>
+      </section>
+
+      <hr class="divider">
+
+      <!-- Paso 8: Nutrición -->
+      <section class="recipe-section">
+        <h2 class="section-title">Nutrition</h2>
+        <p class="nutrition-desc">
+          The table below shows nutritional values per serving without the additional fillings.
+        </p>
+        <table class="nutrition-table">
+          <tbody>
+            <tr>
+              <td class="nutrient-name">Calories</td>
+              <td class="nutrient-value">277kcal</td>
+            </tr>
+            <tr>
+              <td class="nutrient-name">Carbs</td>
+              <td class="nutrient-value">0g</td>
+            </tr>
+            <tr>
+              <td class="nutrient-name">Protein</td>
+              <td class="nutrient-value">20g</td>
+            </tr>
+            <tr class="last-row">
+              <td class="nutrient-name">Fat</td>
+              <td class="nutrient-value">22g</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div><!-- /recipe-body -->
+  </main>
+
+  <!-- Paso 9: Attribution -->
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+</body>
+</html>

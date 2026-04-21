@@ -1,0 +1,288 @@
+/* =============================================
+   Paso 6 — Reset y box-sizing
+   ============================================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================
+   Paso 6 — Estilos base del body
+   Colores del style-guide:
+     Stone 100 : hsl(30, 54%, 90%)   → fondo
+     Stone 600 : hsl(30, 10%, 34%)   → texto párrafos
+     Stone 900 : hsl(24, 5%, 18%)    → texto oscuro
+     Brown 800 : hsl(14, 45%, 36%)   → acento títulos h2
+     Rose 800  : hsl(332, 51%, 32%)  → prep-time title
+     Rose 50   : hsl(330, 100%, 98%) → fondo prep-time
+   ============================================= */
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  background-color: hsl(30, 54%, 90%);   /* Stone 100 */
+  color: hsl(30, 10%, 34%);             /* Stone 600 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =============================================
+   Paso 6 — Tarjeta principal
+   ============================================= */
+.recipe-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 736px;
+  overflow: hidden;
+}
+
+/* =============================================
+   Paso 3 — Imagen
+   ============================================= */
+.recipe-img {
+  width: 100%;
+  display: block;
+  /* En móvil: sin border-radius en la imagen */
+}
+
+/* =============================================
+   Cuerpo interior con padding
+   ============================================= */
+.recipe-body {
+  padding: 32px 24px 40px;
+}
+
+/* =============================================
+   Paso 4 — Título y descripción
+   ============================================= */
+.recipe-title {
+  font-family: 'Young Serif', serif;
+  font-size: 36px;
+  color: hsl(24, 5%, 18%);   /* Stone 900 */
+  font-weight: 400;
+  margin: 0 0 24px;
+  line-height: 1.15;
+}
+
+.recipe-desc {
+  font-size: 16px;
+  color: hsl(30, 10%, 34%); /* Stone 600 */
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+/* =============================================
+   Paso 5 — Sección de tiempo de preparación
+   ============================================= */
+.prep-time {
+  background-color: hsl(330, 100%, 98%); /* Rose 50 */
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.prep-time__title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(332, 51%, 32%); /* Rose 800 */
+  margin: 0 0 16px;
+}
+
+.prep-time__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.prep-time__list li {
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.prep-time__list li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: hsl(332, 51%, 32%); /* Rose 800 */
+  font-weight: 700;
+}
+
+.prep-time__list .label {
+  font-weight: 700;
+  color: hsl(24, 5%, 18%);
+}
+
+/* =============================================
+   Secciones genéricas (Ingredientes, etc.)
+   ============================================= */
+.recipe-section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-family: 'Young Serif', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: hsl(14, 45%, 36%); /* Brown 800 */
+  margin: 0 0 24px;
+}
+
+/* =============================================
+   Paso 6 — Ingredientes (ul)
+   ============================================= */
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ingredients-list li {
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.5;
+  color: hsl(30, 10%, 34%);
+}
+
+.ingredients-list li::before {
+  content: "•";
+  position: absolute;
+  left: 6px;
+  color: hsl(14, 45%, 36%); /* Brown 800 */
+  font-weight: 700;
+}
+
+/* =============================================
+   Paso 7 — Instrucciones (ol)
+   ============================================= */
+.instructions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instructions-list li {
+  counter-increment: step-counter;
+  padding-left: 40px;
+  position: relative;
+  line-height: 1.6;
+  color: hsl(30, 10%, 34%);
+}
+
+.instructions-list li::before {
+  content: counter(step-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: hsl(14, 45%, 36%); /* Brown 800 */
+  width: 30px;
+  text-align: left;
+}
+
+.step-label {
+  font-weight: 700;
+  color: hsl(24, 5%, 18%);
+}
+
+/* =============================================
+   Divisor
+   ============================================= */
+.divider {
+  border: none;
+  border-top: 1px solid hsl(30, 18%, 87%); /* Stone 150 */
+  margin: 0 0 32px;
+}
+
+/* =============================================
+   Paso 8 — Nutrición (tabla)
+   ============================================= */
+.nutrition-desc {
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+.nutrition-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutrition-table tr {
+  border-bottom: 1px solid hsl(30, 18%, 87%); /* Stone 150 */
+}
+
+.nutrition-table tr.last-row {
+  border-bottom: none;
+}
+
+.nutrition-table td {
+  padding: 12px 0;
+}
+
+.nutrient-name {
+  width: 50%;
+  padding-left: 32px;
+  color: hsl(30, 10%, 34%); /* Stone 600 */
+}
+
+.nutrient-value {
+  font-weight: 700;
+  color: hsl(14, 45%, 36%); /* Brown 800 */
+}
+
+/* =============================================
+   Attribution
+   ============================================= */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding: 16px;
+  color: hsl(30, 10%, 34%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* =============================================
+   Paso 8 — Responsive — Media query (768px)
+   ============================================= */
+@media (min-width: 768px) {
+  body {
+    padding: 128px 0 48px;
+  }
+
+  .recipe-card {
+    max-width: 736px;
+    border-radius: 24px;
+  }
+
+  .recipe-img {
+    border-radius: 12px;
+    margin: 40px 40px 0;
+    width: calc(100% - 80px);
+  }
+
+  .recipe-body {
+    padding: 40px 40px 48px;
+  }
+
+  .recipe-title {
+    font-size: 40px;
+  }
+}
