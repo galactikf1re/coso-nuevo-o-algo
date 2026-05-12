@@ -1,4 +1,5 @@
 const http = require('http');
+const { url } = require('inspector');
 const querystring = require('querystring');
 var usuarios = [
     {
@@ -75,6 +76,7 @@ var streaming = [
 ]
 const server = http.createServer((req, res) =>{
     const {method, url} = req;
+    let body = "";
 
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
@@ -104,3 +106,20 @@ const server = http.createServer((req, res) =>{
 server.listen(3000, () => {
     console.log('Servidor corriendo en http://localhost:3000/');
 });
+
+    if(url=== '/api/placeholderhaha/' && method === 'POST'){
+        req.on('data', chunk =>{
+            body += chunk.toString();
+        }
+        );
+        req.on('end', () => {
+            const datosfinales = querystring.parse(body);
+            console.log(datosfinales.nombre);
+            let newPlaceholder = {
+                placeholder1 : datosfinales.placeholder1,
+                placeholder2 : datosfinales.placeholder2,
+                placeholder3 : datosfinales.placeholder3,
+                placeholder4 : datosfinales.placeholder4
+            };
+        })
+    }
