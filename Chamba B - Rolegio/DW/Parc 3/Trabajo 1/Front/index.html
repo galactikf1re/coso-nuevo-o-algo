@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo Naco</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+        }
+        .Botones {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        .tabla-buttons, .formulario-buttons {
+            margin-bottom: 30px;
+        }
+        .tabla-buttons h2, .formulario-buttons h2 {
+            color: #666;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        a, button {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 10px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .tabla-btn {
+            background-color: #667eea;
+            color: white;
+        }
+        .tabla-btn:hover {
+            background-color: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        .form-btn {
+            background-color: #f093fb;
+            color: white;
+        }
+        .form-btn:hover {
+            background-color: #f5576c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+    </style>
 </head>
 <body>
     <div class="Botones">
-        <h1>Trabajo Naco</h1>
-    <a href="../Front/1.html">Tabla 1</a>
-    <a href="../Front/2.html">Tabla 2</a>
-    <a href="../Front/3.html">Tabla 3</a>
+        <h1>📊 Gestión de Datos</h1>
+        
+        <div class="tabla-buttons">
+            <h2>Ver Tablas</h2>
+            <a href="../Front/1.html" class="tabla-btn">📋 Tabla 1 - Usuarios</a>
+            <a href="../Front/2.html" class="tabla-btn">🎮 Tabla 2 - Juegos</a>
+            <a href="../Front/3.html" class="tabla-btn">📺 Tabla 3 - Streaming</a>
+        </div>
+        
+        <div class="formulario-buttons">
+            <h2>Agregar Datos</h2>
+            <a href="../Front/agregar.html" class="form-btn">➕ Agregar Usuario</a>
+            <a href="../Front/agrjuego.html" class="form-btn">➕ Agregar Juego</a>
+            <a href="../Front/agrstr.html" class="form-btn">➕ Agregar Streaming</a>
+        </div>
     </div>
 </body>
 </html>

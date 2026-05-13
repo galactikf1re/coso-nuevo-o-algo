@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios de Streaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button-group a, .button-group button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .add-btn {
+            background-color: #FF9800;
+            color: white;
+        }
+        .add-btn:hover {
+            background-color: #e68900;
+        }
+        .back-btn {
+            background-color: #667eea;
+            color: white;
+        }
+        .back-btn:hover {
+            background-color: #764ba2;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #FF9800;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
 </head>
 <body>
-    <h1>Servicios de Streaming</h1>
+    <div class="header">
+        <h1>📺 Servicios de Streaming</h1>
+        <div class="button-group">
+            <a href="agrstr.html" class="add-btn">➕ Agregar Streaming</a>
+            <a href="index.html" class="back-btn">← Volver al Menú</a>
+        </div>
+    </div>
     <table id="tabla" border="1">
         <thead>
             <tr>
